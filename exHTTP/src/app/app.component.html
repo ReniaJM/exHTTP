@@ -1,0 +1,13 @@
+<button (click)="getPosts()">getPosts</button>
+<button (click)="getPost()">get Post</button>
+<button (click)="getPostByUser()">getPostByUser</button>
+<button (click)="addPost()">addPosts</button>
+<button (click)="updatePost()">updatePost</button>
+<button (click)="deletePost()">deletePost</button>
+<button (click)="changePost()">changePost</button>
+
+<div *ngFor="let p of allPosts$ | async">
+{{p.title}}
+</div>
+
+<!--async wykonuje subskrypcje samodzielnie, subskrybuje tego obeservaibla, ktorego przekazuje do pipe dlatego te dane sie pokazuja, wtedy aplikacja jest bardziej reaktywna, minus jest taki ze stracilismy mozliwosc operowania danymi -->
